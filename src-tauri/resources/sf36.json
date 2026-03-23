@@ -1,0 +1,410 @@
+{
+  "id": "sf36",
+  "version": "br_v1",
+  "title": "Versão Brasileira do Questionário de Qualidade de Vida -SF-36",
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "text": "Em geral você diria que sua saúde é:",
+      "options": [
+        {
+          "value": 1,
+          "label": "Excelente"
+        },
+        {
+          "value": 2,
+          "label": "Muito boa"
+        },
+        {
+          "value": 3,
+          "label": "Boa"
+        },
+        {
+          "value": 4,
+          "label": "Ruim"
+        },
+        {
+          "value": 5,
+          "label": "Muito ruim"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "single",
+      "text": "Comparada há um ano atrás, como você classificaria sua saúde em geral, agora?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Muito melhor"
+        },
+        {
+          "value": 2,
+          "label": "Um pouco melhor"
+        },
+        {
+          "value": 3,
+          "label": "Quase a mesma"
+        },
+        {
+          "value": 4,
+          "label": "Um pouco pior"
+        },
+        {
+          "value": 5,
+          "label": "Muito pior"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "group",
+      "text": "Os seguintes itens são sobre atividades que você poderia fazer atualmente durante um dia comum. Devido à sua saúde, você teria dificuldade para fazer estas atividades? Neste caso, quanto? ",
+      "items": [
+        {
+          "id": "3a",
+          "text": "Atividades Rigorosas, que exigem muito esforço, tais como correr, levantar objetos pesados, participar em esportes árduos."
+        },
+        {
+          "id": "3b",
+          "text": "Atividades moderadas, tais como mover uma mesa, passar aspirador de pó, jogar bola varrer a casa."
+        },
+        {
+          "id": "3c",
+          "text": "Levantar ou carregar mantimentos"
+        },
+        {
+          "id": "3d",
+          "text": "Subir vários lances de escada"
+        },
+        {
+          "id": "3e",
+          "text": "Subir um lance de escada"
+        },
+        {
+          "id": "3f",
+          "text": "Curvar-se, ajoelhar-se ou dobrar-se"
+        },
+        {
+          "id": "3g",
+          "text": "Andar mais de 1 km"
+        },
+        {
+          "id": "3h",
+          "text": "Andar vários quarteirões"
+        },
+        {
+          "id": "3i",
+          "text": "Andar um quarteirão"
+        },
+        {
+          "id": "3j",
+          "text": "Tomar banho ou vestir-se"
+        }
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Sim, dificulta muito"
+        },
+        {
+          "value": 2,
+          "label": "Sim, dificulta um pouco"
+        },
+        {
+          "value": 3,
+          "label": "Não, não dificulta"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "group",
+      "text": "Durante as últimas 4 semanas, você teve algum dos seguintes problemas com seu trabalho ou com alguma atividade regular, como consequência de sua saúde física?",
+      "items": [
+        {
+          "id": "4a",
+          "text": "Você diminui a quantidade de tempo que se dedicava ao seu trabalho ou a outras atividades?"
+        },
+        {
+          "id": "4b",
+          "text": "Realizou menos tarefas do que você gostaria?"
+        },
+        {
+          "id": "4c",
+          "text": "Esteve limitado no seu tipo de trabalho ou a outras atividades."
+        },
+        {
+          "id": "4d",
+          "text": "Teve dificuldade de fazer seu trabalho ou outras atividades (ex. necessitou de um esforço extra)."
+        }
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Sim"
+        },
+        {
+          "value": 2,
+          "label": "Não"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "group",
+      "text": "Durante as últimas 4 semanas, você teve algum dos seguintes problemas com seu trabalho ou outra atividade regular diária, como consequência de algum problema emocional (como se sentir deprimido ou ansioso)?",
+      "items": [
+        {
+          "id": "5a",
+          "text": "Você diminui a quantidade de tempo que se dedicava ao seu trabalho ou a outras atividades?"
+        },
+        {
+          "id": "5b",
+          "text": "Realizou menos tarefas do que você gostaria?"
+        },
+        {
+          "id": "5c",
+          "text": "Não realizou ou fez qualquer das atividades com tanto cuidado como geralmente faz."
+        }
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Sim"
+        },
+        {
+          "value": 2,
+          "label": "Não"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "single",
+      "text": "Durante as últimas 4 semanas, de que maneira sua saúde física ou problemas emocionais interferiram nas suas atividades sociais normais, em relação à família, amigos ou em grupo?",
+      "options": [
+        {
+          "value": 1,
+          "label": "De forma nenhuma"
+        },
+        {
+          "value": 2,
+          "label": "Ligeiramente"
+        },
+        {
+          "value": 3,
+          "label": "Moderadamente"
+        },
+        {
+          "value": 4,
+          "label": "Bastante"
+        },
+        {
+          "value": 5,
+          "label": "Extremamente"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "text": "Quanta dor no corpo você teve durante as últimas 4 semanas?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Nenhuma"
+        },
+        {
+          "value": 2,
+          "label": "Muito leve"
+        },
+        {
+          "value": 3,
+          "label": "Leve"
+        },
+        {
+          "value": 4,
+          "label": "Moderada"
+        },
+        {
+          "value": 5,
+          "label": "Grave"
+        },
+        {
+          "value": 6,
+          "label": "Muito grave"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "single",
+      "text": "Durante as últimas 4 semanas, quanto a dor interferiu com seu trabalho normal (incluindo o trabalho dentro de casa)?",
+      "options": [
+        {
+          "value": 1,
+          "label": "De maneira alguma"
+        },
+        {
+          "value": 2,
+          "label": "Um pouco"
+        },
+        {
+          "value": 3,
+          "label": "Moderadamente"
+        },
+        {
+          "value": 4,
+          "label": "Bastante"
+        },
+        {
+          "value": 5,
+          "label": "Extremamente"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "type": "group",
+      "text": "Estas questões são sobre como você se sente e como tudo tem acontecido com você durante as últimas 4 semanas. Para cada questão, por favor dê uma resposta que mais se aproxime de maneira como você se sente, em relação às últimas 4 semanas. ",
+      "items": [
+        {
+          "id": "9a",
+          "text": "Quanto tempo você tem se sentindo cheio de vigor, de vontade, de força? "
+        },
+        {
+          "id": "9b",
+          "text": "Quanto tempo você tem se sentido uma pessoa muito nervosa?"
+        },
+        {
+          "id": "9c",
+          "text": "Quanto tempo você tem se sentido tão deprimido que nada pode anima-lo?"
+        },
+        {
+          "id": "9d",
+          "text": "Quanto tempo você tem se sentido calmo ou tranquilo?"
+        },
+        {
+          "id": "9e",
+          "text": "Quanto tempo você tem se sentido com muita energia?"
+        },
+        {
+          "id": "9f",
+          "text": "Quanto tempo você tem se sentido desanimado ou abatido?"
+        },
+        {
+          "id": "9g",
+          "text": "Quanto tempo você tem se sentido esgotado?"
+        },
+        {
+          "id": "9h",
+          "text": "Quanto tempo você tem se sentido uma pessoa feliz?"
+        },
+        {
+          "id": "9i",
+          "text": "Quanto tempo você tem se sentido cansado?"
+        }
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Todo tempo"
+        },
+        {
+          "value": 2,
+          "label": "A maior parte do tempo"
+        },
+        {
+          "value": 3,
+          "label": "Uma boa parte do tempo"
+        },
+        {
+          "value": 4,
+          "label": "Alguma parte do tempo"
+        },
+        {
+          "value": 5,
+          "label": "Uma pequena parte do tempo"
+        },
+        {
+          "value": 6,
+          "label": "Nunca"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "text": "Durante as últimas 4 semanas, quanto de seu tempo a sua saúde física ou problemas emocionais interferiram com as suas atividades sociais (como visitar amigos, parentes, etc)?",
+      "options": [
+        {
+          "value": 1,
+          "label": "Todo tempo"
+        },
+        {
+          "value": 2,
+          "label": "A maior parte do tempo"
+        },
+        {
+          "value": 3,
+          "label": "Alguma parte do tempo"
+        },
+        {
+          "value": 4,
+          "label": "Uma pequena parte do tempo"
+        },
+        {
+          "value": 5,
+          "label": "Nenhuma parte do tempo"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "type": "group",
+      "text": "O quanto verdadeiro ou falso é cada uma das afirmações para você?",
+      "items": [
+        {
+          "id": "11a",
+          "text": "Eu costumo obedecer um pouco mais facilmente que as outras pessoas"
+        },
+        {
+          "id": "11b",
+          "text": "Eu sou tão saudável quanto qualquer pessoa que eu conheço"
+        },
+        {
+          "id": "11c",
+          "text": "Eu acho que a minha saúde vai piorar"
+        },
+        {
+          "id": "11d",
+          "text": "Minha saúde é excelente"
+        }
+      ],
+      "options": [
+        {
+          "value": 1,
+          "label": "Definitivamente verdadeiro"
+        },
+        {
+          "value": 2,
+          "label": "A maioria das vezes verdadeiro"
+        },
+        {
+          "value": 3,
+          "label": "Não sei"
+        },
+        {
+          "value": 4,
+          "label": "A maioria das vezes falso"
+        },
+        {
+          "value": 5,
+          "label": "Definitivamente falso"
+        }
+      ]
+    }
+  ]
+}
