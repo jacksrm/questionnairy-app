@@ -20,4 +20,3 @@ pub fn run() {
 
 mod application;
 mod domain;
-mod dto;

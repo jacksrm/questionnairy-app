@@ -18,3 +18,8 @@ pub struct UpdatePatient {
     pub phone2: Option<Option<String>>,
     pub birth_date: Option<NaiveDate>,
 }
+
+pub enum GetPatientBy {
+    Id(Uuid),
+    Cpf(String),
+}

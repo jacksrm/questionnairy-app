@@ -1,8 +1,8 @@
 use uuid::Uuid;
 
+use crate::application::patient::dto::{CreatePatient, UpdatePatient};
 use crate::application::patient::repository::PatientRepository;
 use crate::domain::patient::Patient;
-use crate::dto::patient::{CreatePatient, UpdatePatient};
 
 pub struct PatientService {
     repo: Box<dyn PatientRepository>,
@@ -15,6 +15,7 @@ impl PatientService {
 }
 
 pub mod create;
+pub mod get;
 pub mod get_all;
 pub mod update;
 

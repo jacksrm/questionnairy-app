@@ -1,4 +1,4 @@
-use crate::application::patient::error::PatientError;
+use crate::application::patient::{dto::UpdatePatient, error::PatientError};
 
 use super::*;
 
