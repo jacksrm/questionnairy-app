@@ -15,6 +15,7 @@ impl PatientService {
 }
 
 pub mod create;
+pub mod get_all;
 pub mod update;
 
 #[cfg(test)]
