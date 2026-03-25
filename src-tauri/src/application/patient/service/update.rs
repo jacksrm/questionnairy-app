@@ -1,4 +1,4 @@
-use crate::application::patient::{dto::UpdatePatient, error::PatientError};
+use crate::application::patient::dto::update::UpdatePhone2Field;
 
 use super::*;
 
@@ -38,7 +38,10 @@ impl PatientService {
         }
 
         if let Some(v) = phone2 {
-            to_update.phone2 = v;
+            to_update.phone2 = match v {
+                UpdatePhone2Field::Clear => None,
+                UpdatePhone2Field::Value(v) => Some(v),
+            };
         }
 
         self.repo.save(&to_update)?;

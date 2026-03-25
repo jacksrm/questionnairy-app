@@ -1,7 +1,3 @@
-use chrono::NaiveDate;
-
-use crate::application::patient::{dto::create::CreatePatient, error::PatientError};
-
 use super::*;
 
 #[test]

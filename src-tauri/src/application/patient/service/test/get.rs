@@ -1,5 +1,3 @@
-use crate::application::patient::dto::GetPatientBy;
-
 use super::*;
 
 #[test]

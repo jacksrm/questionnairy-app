@@ -7,6 +7,7 @@ use super::*;
 const PATIENT_NAME: &str = "John Doe";
 const PATIENT_CPF: &str = "123.456.789-00";
 const PATIENT_PHONE1: &str = "(85) 98765-4321";
+const PATIENT_PHONE2: &str = "(85) 98765-4322";
 const PATIENT_BIRTH_DATE: &str = "1988-02-26";
 const PATIENT_BIRTH_DATE_FMT: &str = "%Y-%m-%d";
 
@@ -32,7 +33,7 @@ fn service_factory_single() -> PatientService {
         name: PATIENT_NAME.to_string(),
         cpf: PATIENT_CPF.to_string(),
         phone1: PATIENT_PHONE1.to_string(),
-        phone2: None,
+        phone2: Some(PATIENT_PHONE2.to_string()),
         birth_date: NaiveDate::parse_from_str(PATIENT_BIRTH_DATE, PATIENT_BIRTH_DATE_FMT).unwrap(),
     };
 
@@ -50,7 +51,7 @@ fn service_factory_many() -> PatientService {
             name: format!("{}{}", PATIENT_NAME, n),
             cpf: patient_cpf(n),
             phone1: PATIENT_PHONE1.to_string(),
-            phone2: None,
+            phone2: Some(PATIENT_PHONE2.to_string()),
             birth_date: NaiveDate::parse_from_str(PATIENT_BIRTH_DATE, PATIENT_BIRTH_DATE_FMT)
                 .unwrap(),
         };

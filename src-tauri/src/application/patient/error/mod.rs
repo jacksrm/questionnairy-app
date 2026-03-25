@@ -11,4 +11,5 @@ pub enum ValidationError {
     InvalidPhone1Field,
     InvalidPhone2Field,
     InvalidBirthDateField,
+    InvalidIdField,
 }
