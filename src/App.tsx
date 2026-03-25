@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import { invoke } from '@tauri-apps/api/core';
 import './App.css';
@@ -8,6 +8,17 @@ function App() {
   const [num, setNum] = useState(0);
   const [name, setName] = useState('');
 
+  const input = useMemo(
+    () => ({
+      name: 'Jacson Rodrigues',
+      cpf: '123.456.789-00',
+      phone1: '(11) 99999-9999',
+      phone2: null,
+      birth_date: '1990-01-01',
+    }),
+    [],
+  );
+
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
     setGreetMsg(await invoke('greet', { name }));
@@ -15,6 +26,10 @@ function App() {
 
   async function sum(a: number, b: number) {
     setNum(await invoke('sum', { a: Math.trunc(a), b: Math.trunc(b) }));
+  }
+
+  async function doSomethingStupid() {
+    await invoke('do_something_stupid', { input });
   }
 
   return (
@@ -39,7 +54,7 @@ function App() {
         onSubmit={(e) => {
           e.preventDefault();
           greet();
-          sum(2, 5);
+          doSomethingStupid();
         }}>
         <input
           id="greet-input"
