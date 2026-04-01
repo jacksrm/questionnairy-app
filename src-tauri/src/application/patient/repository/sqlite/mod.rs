@@ -16,10 +16,14 @@ pub struct SqlitePatientRepository {
 
 impl SqlitePatientRepository {
     pub async fn new(database_url: &str) -> Result<Self, PatientError> {
-        let options = SqlitePoolOptions::new().max_connections(5);
-        let pool = options.connect(database_url).await.map_err(|e| {
-            PatientError::RepositoryError(format!("Failed to connect to database: {}", e))
-        })?;
+        let options = SqlitePoolOptions::new().max_connections(1);
+        let pool = options
+            .max_connections(1)
+            .connect(database_url)
+            .await
+            .map_err(|e| {
+                PatientError::RepositoryError(format!("Failed to connect to database: {}", e))
+            })?;
 
         // Enable foreign keys (SQLite gotcha)
         sqlx::query("PRAGMA foreign_keys = ON;")

@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@layer components {
+  .error-message {
+    @apply text-red-600 text-sm opacity-80;
+  }
+
+  .input-label {
+    @apply font-medium;
+  }
+
+  .input-label-container {
+    @apply flex items-baseline justify-between;
+  }
+
+  .form-root {
+    @apply flex flex-col gap-5;
+  }
+}

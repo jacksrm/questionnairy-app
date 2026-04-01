@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@layer components {
+  .button {
+    @apply bg-sky-600 p-2 text-gray-50 hover:brightness-90  transition-transform active:scale-95 cursor-pointer rounded-full flex items-center gap-1 self-end text-base;
+
+    svg {
+      @apply size-6;
+    }
+  }
+
+  .button-label-auto {
+    @apply whitespace-nowrap ml-1.5 hidden min-[650px]:inline;
+  }
+
+  .button-label-manual {
+    @apply whitespace-nowrap ml-1.5 hidden;
+
+    &[data-show='true'] {
+      @apply inline;
+    }
+  }
+}

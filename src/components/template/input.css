@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@layer components {
+  .input {
+    @apply p-1 focus:pl-3 placeholder:italic outline-0 transition-[padding] duration-100 grow border-b-2 border-sky-600;
+  }
+
+  .reset-button {
+    @apply absolute right-2 top-1/2 -translate-y-1/2 transition duration-100 text-rose-900;
+
+    &[data-show='true'] {
+      @apply hover:scale-150 focus:scale-150 scale-120 opacity-100 active:scale-100;
+    }
+
+    &[data-show='false'] {
+      @apply scale-0 opacity-0 pointer-events-none;
+    }
+  }
+}

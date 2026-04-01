@@ -21,11 +21,6 @@ mod repository;
 mod service;
 mod validation;
 
-#[tauri::command]
-pub fn do_something_stupid(input: CreatePatientInput) {
-    println!("Doing something stupid with input: {:?}", input);
-}
-
 pub struct PatientModule {
     controller: PatientController,
 }

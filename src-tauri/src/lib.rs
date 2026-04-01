@@ -12,7 +12,6 @@ pub fn run() {
         })
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![
-            patient::do_something_stupid,
             patient::get_all,
             patient::get_patient,
             patient::delete,

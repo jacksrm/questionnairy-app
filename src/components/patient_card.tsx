@@ -14,7 +14,7 @@ export default function PatientCard({ patient }: PatientCardProps) {
   return (
     <article className="card">
       <div className="flex gap-2 grow text-xl border-b-2 border-b-black/50">
-        <h3 className="font-semibold">Paciente: </h3>
+        <h3 className="font-medium pl-2">Paciente: </h3>
         <p className="font-mono uppercase">{patient.name}</p>
       </div>
       <div className="flex flex-wrap">
@@ -32,7 +32,9 @@ export default function PatientCard({ patient }: PatientCardProps) {
         </div>
         <div className="card-table-item">
           <h3 className="card-table-heading">Telefone 2</h3>
-          <p className="card-table-content">{patient.phone2}</p>
+          <p className="card-table-content">
+            {patient.phone2 || 'Não Informado'}
+          </p>
         </div>
       </div>
     </article>
