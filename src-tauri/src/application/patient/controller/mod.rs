@@ -3,7 +3,7 @@ use crate::{
         dto::{
             create::{CreatePatient, CreatePatientInput},
             delete::{DeletePatient, DeletePatientInput},
-            get::{GetPatientBy, GetPatientByInput},
+            get::{GetByName, GetPatientBy, GetPatientByInput},
             update::{UpdatePatient, UpdatePatientInput},
         },
         error::{ResponseError, UIError},
@@ -64,5 +64,14 @@ impl PatientController {
         self.service.update(dto).await.map_err(|e| ResponseError {
             content: vec![UIError::from(e)],
         })
+    }
+
+    pub async fn get_by_name(&self, input: GetByName) -> Result<Vec<Patient>, ResponseError> {
+        self.service
+            .get_by_name(input)
+            .await
+            .map_err(|e| ResponseError {
+                content: vec![UIError::from(e)],
+            })
     }
 }

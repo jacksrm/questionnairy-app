@@ -17,6 +17,7 @@ pub fn run() {
             patient::delete,
             patient::create,
             patient::update,
+            patient::get_by_name
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

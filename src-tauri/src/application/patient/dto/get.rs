@@ -35,6 +35,9 @@ impl GetPatientBy {
     }
 }
 
+#[derive(Deserialize)]
+pub struct GetByName(pub String);
+
 #[cfg(test)]
 mod test {
     use super::*;

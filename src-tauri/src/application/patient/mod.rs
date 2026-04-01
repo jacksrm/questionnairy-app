@@ -4,7 +4,9 @@ use crate::{
     application::patient::{
         controller::PatientController,
         dto::{
-            create::CreatePatientInput, delete::DeletePatientInput, get::GetPatientByInput,
+            create::CreatePatientInput,
+            delete::DeletePatientInput,
+            get::{GetByName, GetPatientByInput},
             update::UpdatePatientInput,
         },
         error::ResponseError,
@@ -73,4 +75,12 @@ pub async fn update(
     state: tauri::State<'_, PatientModule>,
 ) -> Result<Patient, ResponseError> {
     state.controller.update(input).await
+}
+
+#[tauri::command]
+pub async fn get_by_name(
+    input: GetByName,
+    state: tauri::State<'_, PatientModule>,
+) -> Result<Vec<Patient>, ResponseError> {
+    state.controller.get_by_name(input).await
 }

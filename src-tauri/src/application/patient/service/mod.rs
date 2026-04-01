@@ -3,7 +3,7 @@ use uuid::Uuid;
 use crate::application::patient::dto::{
     create::CreatePatient,
     delete::DeletePatient,
-    get::GetPatientBy,
+    get::{GetByName, GetPatientBy},
     update::{UpdatePatient, UpdatePhone2Field},
 };
 use crate::application::patient::error::PatientError;
@@ -25,6 +25,7 @@ pub mod create;
 pub mod delete;
 pub mod get;
 pub mod get_all;
+pub mod get_by_name;
 pub mod update;
 
 #[cfg(test)]
