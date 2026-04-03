@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import './patient_card.css';
 
 type PatientCardProps = {
@@ -14,8 +15,10 @@ export default function PatientCard({ patient }: PatientCardProps) {
   return (
     <article className="card">
       <div className="flex gap-2 grow text-xl border-b-2 border-b-black/50">
-        <h3 className="font-medium pl-2">Paciente: </h3>
-        <p className="font-mono uppercase">{patient.name}</p>
+        <h3 className="font-medium pl-2 select-none">Paciente: </h3>
+        <Link to={`patient/${patient.id}`} className="patient-link">
+          {patient.name}
+        </Link>
       </div>
       <div className="flex flex-wrap">
         <div className="card-table-item">

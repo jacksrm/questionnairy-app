@@ -20,7 +20,6 @@ export default function ButtonLabel({
     } else {
       return (
         <span data-show={showLabel} className="button-label-manual">
-          {' '}
           {label}
         </span>
       );

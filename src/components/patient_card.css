@@ -10,7 +10,7 @@
   }
 
   .card-table-heading {
-    @apply font-medium text-center;
+    @apply font-medium text-center select-none;
   }
 
   .card-table-content {

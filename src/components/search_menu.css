@@ -9,10 +9,6 @@
     @apply px-2 data-[state=on]:bg-sky-600 data-[state=on]:text-gray-50 transition-colors duration-200 rounded-md;
   }
 
-  .tabs-content-input {
-    @apply p-1 focus:pl-3 placeholder:italic outline-0 transition-[padding] duration-100 grow border-b-2 border-sky-600;
-  }
-
   .search-menu-button {
     @apply bg-sky-600 p-2 min-[650px]:pl-3 text-gray-50 hover:brightness-90 transition-[brightness] duration-200 cursor-pointer rounded-full flex items-center gap-1 self-end text-base;
 
@@ -24,6 +20,7 @@
   .search-menu-button-text {
     @apply whitespace-nowrap hidden min-[650px]:inline;
   }
+
   .tabs-content-form {
     @apply flex text-lg min-w-max gap-2;
   }

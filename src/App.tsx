@@ -1,15 +1,13 @@
 import { Toaster } from 'sonner';
-import MainPage from './pages/main_page';
 import PatientsProvider from './context/patients';
+import MainRouter from './router/main_router';
 
 function App() {
   return (
-    <>
-      <PatientsProvider>
-        <Toaster />
-        <MainPage />
-      </PatientsProvider>
-    </>
+    <PatientsProvider>
+      <Toaster />
+      <MainRouter />
+    </PatientsProvider>
   );
 }
 

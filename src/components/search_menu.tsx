@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
-import { Tabs, ToggleGroup } from 'radix-ui';
+import { ToggleGroup } from 'radix-ui';
 import { useContext, useEffect, useState } from 'react';
 import './search_menu.css';
 import NewPatientDialog from './new_patient_dialog';
@@ -10,7 +10,8 @@ import { PatientContext } from '../context/patients';
 type SearchType = 'name' | 'cpf';
 
 export default function SearchMenu() {
-  const { searchCpf, updatePatientList } = useContext(PatientContext);
+  const { searchCpf, updatePatientList, searchName } =
+    useContext(PatientContext);
 
   const [searchType, setSearchType] = useState<SearchType>('name');
   const [searchInput, setSearchInput] = useState('');
@@ -49,12 +50,13 @@ export default function SearchMenu() {
 
   const handleFormSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!searchInput) return;
 
     switch (searchType) {
       case 'name':
+        searchName(searchInput);
         break;
       case 'cpf':
-        if (!searchInput) return;
         searchCpf(searchInput);
         break;
 

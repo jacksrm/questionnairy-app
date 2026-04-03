@@ -10,14 +10,14 @@
   }
 
   .button-label-auto {
-    @apply whitespace-nowrap ml-1.5 hidden min-[650px]:inline;
+    @apply whitespace-nowrap ml-1.5 hidden min-[650px]:inline-flex;
   }
 
   .button-label-manual {
     @apply whitespace-nowrap ml-1.5 hidden;
 
     &[data-show='true'] {
-      @apply inline;
+      @apply inline-flex;
     }
   }
 }
