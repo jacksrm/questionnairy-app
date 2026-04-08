@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from 'react-router';
-import './patient.css';
 import { useEffect, useState } from 'react';
 import { getPatient } from '../commands/patient/get';
 import showErrorFriendly from '../utils/show_error_friendly';
+import './patient.css';
 
 export default function Patient() {
   const [patient, setPatient] = useState<Patient>({} as Patient);
@@ -26,31 +26,12 @@ export default function Patient() {
   }, []);
   return (
     <main>
-      <h1>Patient</h1>
-      <div>
-        <h3>ID: </h3>
-        <p>{id}</p>
-      </div>
-      <div>
-        <h3>Nome:</h3>
-        <p>{patient.name}</p>
-      </div>
-      <div>
-        <h3>CPF:</h3>
-        <p>{patient.cpf}</p>
-      </div>
-      <div>
-        <h3>Data de Nascimento: </h3>
-        <p>{patient.birth_date}</p>
-      </div>
-      <div>
-        <h3>Telefone 1:</h3>
-        <p>{patient.phone1}</p>
-      </div>
-      <div>
-        <h3>Telefone 2:</h3>
-        <p>{patient.phone2 || 'Nenhum Telefone Registrado'}</p>
-      </div>
+      <section className="title">
+        <h1 className="patient-title">{patient.name}</h1>
+      </section>
+      <section className="activity-history">
+        <h2 className="activity-history-title">Histórico de Atividades</h2>
+      </section>
     </main>
   );
 }

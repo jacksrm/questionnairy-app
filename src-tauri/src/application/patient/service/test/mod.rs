@@ -1,4 +1,5 @@
 use chrono::NaiveDate;
+use sqlx::sqlite::SqlitePoolOptions;
 
 use crate::application::patient::{
     dto::update::UpdatePhone2Field, repository::sqlite::SqlitePatientRepository,
@@ -45,7 +46,30 @@ fn database_url() -> String {
 }
 
 async fn service_factory() -> PatientService {
-    let repo = Box::new(SqlitePatientRepository::new(&database_url()).await.unwrap());
+    let database_url = format!("sqlite://file:{}?mode=memory&cache=shared", Uuid::new_v4());
+    let options = SqlitePoolOptions::new().max_connections(1);
+    let sqlite_pool = options
+        .max_connections(1)
+        .connect(&database_url)
+        .await
+        .unwrap();
+
+    // Enable foreign keys (SQLite gotcha)
+    sqlx::query("PRAGMA foreign_keys = ON;")
+        .execute(&sqlite_pool)
+        .await
+        .unwrap();
+
+    sqlx::migrate!().run(&sqlite_pool).await.unwrap();
+
+    sqlx::query(include_str!(
+        "../../../../../resources/db/seed_patients.sql"
+    ))
+    .execute(&sqlite_pool)
+    .await
+    .unwrap();
+
+    let repo = Box::new(SqlitePatientRepository::new(sqlite_pool.clone()));
     let service = PatientService::new(repo);
 
     service

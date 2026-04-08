@@ -14,6 +14,10 @@
   }
 
   .card-table-content {
-    @apply text-center font-light;
+    @apply text-center font-normal font-mono text-black/70;
+  }
+
+  .patient-link {
+    @apply underline text-sky-600;
   }
 }

@@ -1,12 +1,8 @@
 @import 'tailwindcss';
 
 @layer components {
-  .tabs-trigger {
-    @apply px-2 data-[state=active]:bg-sky-600 data-[state=active]:text-gray-50 transition-colors duration-200 rounded-md;
-  }
-
   .toggle-group-item {
-    @apply px-2 data-[state=on]:bg-sky-600 data-[state=on]:text-gray-50 transition-colors duration-200 rounded-md;
+    @apply px-2 py-0.5 data-[state=on]:bg-sky-600 data-[state=on]:text-gray-50 transition-colors duration-200 rounded-full;
   }
 
   .search-menu-button {

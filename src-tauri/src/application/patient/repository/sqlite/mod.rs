@@ -15,34 +15,8 @@ pub struct SqlitePatientRepository {
 }
 
 impl SqlitePatientRepository {
-    pub async fn new(database_url: &str) -> Result<Self, PatientError> {
-        let options = SqlitePoolOptions::new().max_connections(1);
-        let pool = options
-            .max_connections(1)
-            .connect(database_url)
-            .await
-            .map_err(|e| {
-                PatientError::RepositoryError(format!("Failed to connect to database: {}", e))
-            })?;
-
-        // Enable foreign keys (SQLite gotcha)
-        sqlx::query("PRAGMA foreign_keys = ON;")
-            .execute(&pool)
-            .await
-            .unwrap();
-
-        sqlx::migrate!().run(&pool).await.map_err(|e| {
-            PatientError::RepositoryError(format!("Failed to run migrations: {}", e))
-        })?;
-
-        sqlx::query(include_str!(
-            "../../../../../resources/db/seed_patients.sql"
-        ))
-        .execute(&pool)
-        .await
-        .map_err(|e| PatientError::RepositoryError(format!("Failed to insert seed data: {}", e)))?;
-
-        Ok(Self { pool })
+    pub fn new(pool: SqlitePool) -> Self {
+        Self { pool }
     }
 }
 

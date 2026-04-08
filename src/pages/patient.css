@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+@layer components {
+  .title {
+    @apply flex p-2 border-b-2 border-sky-600;
+  }
+  .patient-title {
+    @apply text-2xl font-normal uppercase text-black/70;
+  }
+
+  .activity-history {
+    @apply p-2 mt-2;
+  }
+
+  .activity-history-title-box {
+    @apply border-b-2 border-sky-600;
+  }
+
+  .activity-history-title {
+    @apply text-xl font-semibold;
+  }
+}
